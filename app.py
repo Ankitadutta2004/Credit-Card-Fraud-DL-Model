@@ -3,11 +3,11 @@ import numpy as np
 import joblib
 from keras.models import load_model
 
-# ✅ 1. Set Streamlit config at the top
+# 1. Set Streamlit config at the top
 st.set_page_config(page_title="Credit Card Fraud Detection", layout="centered")
 
 # ===============================
-# 🎯 2. Load Artifacts
+# 2. Load Artifacts
 # ===============================
 @st.cache_resource
 def load_artifacts():
@@ -20,7 +20,7 @@ def load_artifacts():
 autoencoder, mse_min, mse_max, threshold = load_artifacts()
 
 # ===============================
-# 📊 3. Streamlit UI
+# 3. Streamlit UI
 # ===============================
 st.title("🔍 Credit Card Fraud Detection")
 st.write("Paste *30 comma-separated values* (Time, V1–V28, Amount):")
